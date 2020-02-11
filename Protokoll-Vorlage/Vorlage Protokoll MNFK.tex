@@ -1,0 +1,101 @@
+\documentclass [titlepage] {article}
+\usepackage[T1]{fontenc}
+\usepackage{eurosym}
+\usepackage[utf8]{inputenc}
+\usepackage {lmodern}
+\usepackage[ngerman]{babel}
+\usepackage{lipsum}
+\usepackage{titlesec}
+\usepackage{geometry}
+\usepackage{enumerate}
+\usepackage{colortbl}
+\usepackage{subfiles}
+\usepackage{ulem}
+
+\geometry {a4paper, top= 20mm, bottom=20mm, left=20mm, right=20mm}
+\titleformat{\part}{\rmfamily \bfseries \centering \fontsize{17pt}{22pt}\selectfont}{}{0pt}{}
+\titleformat{\section}{\fontsize{12pt}{13pt}\bfseries}{TOP \thesection :  }{0pt}{}
+
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}} % linksbündig mit Breitenangabe
+\newcolumntype{C}[1]{>{\centering\arraybackslash}p{#1}} % zentriert mit Breitenangabe
+\newcolumntype{R}[1]{>{\raggedleft\arraybackslash}p{#1}} % rechtsbündig mit Breitenangabe
+
+\DeclareUnicodeCharacter{20AC}{\euro}
+
+\begin{document}
+\newcommand{\vote}[3]{
+	\hspace{1ex} \textit{\normalsize{Abstimmung:}} \\[1mm] 
+	\begin{tabular}{c|c|c}
+		\scriptsize Ja& \scriptsize Nein& \scriptsize Enthaltung \\
+		\rule{0pt}{12pt}
+		\Large  #1& \Large #2 &\Large #3
+	\end{tabular}
+	\normalsize}
+\newcommand{\verfahren}[1]{
+	\textit{#1} \vspace{2mm} }
+
+\part*{Protokoll der Math.-Nat. FK am XX.XX.XXXX}
+\section{Begrüßung}
+\verfahren{\dots eröffnet die Sitzung um XX:XX Uhr.}\\
+Folgende Fachschaften sind anwesend:
+\begin{itemize}
+	\setlength\itemsep{0,5mm}
+	\item Biologie
+	\item Chemie
+	\item Geographie
+	\item Geowissenschaften
+	\item Informatik
+	\item Lehramt			
+	\item Mathematik
+	\item Meteorologie
+	\item Molekulare Biomedizin
+	\item Pharmazie
+	\item Physik / Astronomie
+\end{itemize}
+
+\section{Festlegung eines Protokollanten}
+\verfahren{.... übernimmt die Protokollführung.}
+
+\section{Endgültige Festlegung der Tagesordnung}
+\verfahren{Die in der Einladung verschickte Tagesordnung wird einstimmig angenommen.}\\
+Endgültige Tagesordnung:
+
+\begin{enumerate}[{TOP} 1{:}]
+	\setlength\itemsep{0,1 mm}
+	\item Eröffnung
+	\item Festlegung eines Protokollanten
+	\item Endgültige Festlegung der Tagesordnung
+	\item Verabschiedung von Protokollen
+	\item Wahlen
+	\item Sonstiges
+\end{enumerate}
+
+\section{Verabschiedung von Protokollen}
+\verfahren{Das Protokoll der Sitzung vom XX.XX.XXXX wird einstimmig angenommen.}
+
+\section{Wahlen}
+\begin{itemize}
+	\item QV-Kommission der Fakultät (2 Stellvertreter, vertagt)\\
+	\verfahren{Es gibt keine Kandidaten, die Wahl wird vertagt.}
+	\item Stellv. Vorsitz der MNFK (vertagt)\\[2mm]
+	\verfahren{Es gibt keine Kandidaten, die Wahl wird vertagt.}
+\end{itemize}
+\section{Berichte aus den Gremien}
+\begin{itemize}
+	\item \textbf{Fakultätsrat}: 	\verfahren{Es gibt nichts zu berichten.}
+
+	\item \textbf{Studienbeirat}: 	\verfahren{Es gibt nichts zu berichten.}
+
+	\item \textbf{QV-Kommission (Fakultät)}:	\verfahren{Es gibt nichts zu berichten.}
+
+	\item \textbf{Finanzkommission}:	\verfahren{Es gibt nichts zu berichten.}
+
+	\item \textbf{Strukturkommission}:	\verfahren{Es gibt nichts zu berichten.}
+
+	\item  \textbf{QV-Kommission (Senat)}:	\verfahren{Es gibt nichts zu berichten.}
+\end{itemize}
+
+\section{Sonstiges}
+\verfahren{\dots schließt die Sitzung um XX:XX Uhr.}
+
+\end{document}
